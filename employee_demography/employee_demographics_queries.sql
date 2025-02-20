@@ -1,6 +1,6 @@
 #Data Analist: Jeremiah
 
-#Request: Hi John, could you please provide me all the data for our employee based on demography
+
 # 1. Select All Data
 SELECT * FROM parks_and_recreation.employee_demographics;
 
