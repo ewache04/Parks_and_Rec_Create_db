@@ -1,7 +1,8 @@
 -- Data Analist: Jeremiah
+-- This solution is for "order_request_1" by "John Doe"
 
 -- #1. Select All Data
-SELECT * FROM parks_and_recreation.employee_demographics;
+
 
 
 -- #2. Select Specific Columns (employee ID, first name, last name, age, gender, and birth date)
