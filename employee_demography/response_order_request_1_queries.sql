@@ -1,6 +1,5 @@
 -- Data Analist: Jeremiah
 
-
 -- #1. Select All Data
 SELECT * FROM parks_and_recreation.employee_demographics;
 
@@ -15,7 +14,7 @@ SELECT * FROM parks_and_recreation.employee_demographics
 WHERE age > 30;
 
 
--- 4. Filter by Gender (Only Male Employees)
+-- #4. Filter by Gender (Only Male Employees)
 SELECT * FROM parks_and_recreation.employee_demographics 
 WHERE gender = 'Male';
 
@@ -35,14 +34,20 @@ SELECT gender, COUNT(*) AS total_employees
 FROM parks_and_recreation.employee_demographics 
 GROUP BY gender;
 
+SELECT gender, COUNT(*) AS total_male
+FROM parks_and_recreation.employee_demographics WHERE gender = 'male' and age < '90';
+
+
 -- #8. Find the Youngest and Oldest Employees
 SELECT * FROM parks_and_recreation.employee_demographics 
 ORDER BY age ASC LIMIT 1;  -- Youngest Employee
 
+
 SELECT * FROM parks_and_recreation.employee_demographics 
 ORDER BY age DESC LIMIT 1;  -- Oldest Employee
 
--- #9. Find Employees with Last Names Starting with 'S'**
+
+-- #9. Find Employees with Last Names Starting with 'S'
 SELECT * FROM parks_and_recreation.employee_demographics 
 WHERE last_name LIKE 'S%';
 
