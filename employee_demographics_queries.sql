@@ -1,0 +1,45 @@
+#Data Analist: Jeremiah
+
+# 1. Select All Data
+SELECT * FROM parks_and_recreation.employee_demographics;
+
+#2. Select Specific Columns
+SELECT employee_id, first_name, last_name, age, gender, birth_date 
+FROM parks_and_recreation.employee_demographics;
+
+
+#3. Filter by Age (e.g., Employees Older Than 30)
+SELECT * FROM parks_and_recreation.employee_demographics 
+WHERE age > 30;
+
+#4. Filter by Gender (e.g., Only Male Employees)
+SELECT * FROM parks_and_recreation.employee_demographics 
+WHERE gender = 'Male';
+
+#5. Find Employees Born After 1990
+SELECT * FROM parks_and_recreation.employee_demographics 
+WHERE birth_date > '1990-01-01';
+
+#6. Order Employees by Last Name
+SELECT * FROM parks_and_recreation.employee_demographics 
+ORDER BY last_name ASC;
+
+#7. Count Employees by Gender
+SELECT gender, COUNT(*) AS total_employees 
+FROM parks_and_recreation.employee_demographics 
+GROUP BY gender;
+
+#8. Find the Youngest and Oldest Employees
+SELECT * FROM parks_and_recreation.employee_demographics 
+ORDER BY age ASC LIMIT 1;  -- Youngest Employee
+
+SELECT * FROM parks_and_recreation.employee_demographics 
+ORDER BY age DESC LIMIT 1;  -- Oldest Employee
+
+#9. Find Employees with Last Names Starting with 'S'**
+SELECT * FROM parks_and_recreation.employee_demographics 
+WHERE last_name LIKE 'S%';
+
+#10. Count Total Employees
+SELECT COUNT(*) AS total_employees 
+FROM parks_and_recreation.employee_demographics;
