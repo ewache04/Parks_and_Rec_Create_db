@@ -43,7 +43,9 @@ WHERE age IN ((SELECT MIN(age) FROM parks_and_recreation.employee_demographics),
 -- #9 list of employees whose last names start with the letter "S."
 SELECT *
 FROM parks_and_recreation.employee_demographics
-WHERE LOWER(last_name) LIKE 'S%';
+WHERE LOWER(last_name) LIKE 'B%';
+
+-- #9 list of employees whose last names start with the letter "S."
 
 
 
