@@ -45,7 +45,22 @@ SELECT *
 FROM parks_and_recreation.employee_demographics
 WHERE LOWER(last_name) LIKE 'B%';
 
--- #9 list of employees whose last names start with the letter "S."
+-- #10 The total number of employees in the database.
+SELECT employee_id, COUNT(*) AS total_emp
+FROM parks_and_recreation.employee_demographics;
+
+-- #11 The average age of all employees.
+SELECT AVG(age) AS avg_age
+FROM parks_and_recreation.employee_demographics;
+
+-- #12 A list of employees who have a birth date in the current month.
+SELECT * 
+FROM parks_and_recreation.employee_demographics
+
+WHERE MONTH(birth_date) = MONTH(CURRENT_DATE()) AND YEAR(birth_date) <= (CURRENT_DATE());
+
+-- #13 A breakdown of the number of employees in each age group (e.g., 20-29, 30-39, etc.)
+
 
 
 
