@@ -45,7 +45,17 @@ VALUES
 (17, 'Shauna', 'Malwae-Tweep', 31, 'Female', '1992-11-22'),
 (18, 'Ethel', 'Beavers', 70, 'Female', '1953-12-03'),
 (19, 'Dennis', 'Feinstein', 50, 'Male', '1973-07-19'),
-(20, 'Jennifer', 'Barkley', 42, 'Female', '1981-05-10');
+(20, 'Jennifer', 'Barkley', 42, 'Female', '1981-05-10'),
+(21, 'Sam', 'Smith', 29, 'Male', '1994-06-15'),
+(22, 'Samantha', 'Sims', 33, 'Female', '1990-03-22'),
+(23, 'Eva', 'Evans', 27, 'Female', '1996-09-10'),
+(24, 'Olivia', 'Ortiz', 31, 'Female', '1992-07-07'),
+(25, 'Adam', 'Adams', 40, 'Male', '1983-04-18'),
+(26, 'Ivy', 'Ingram', 26, 'Female', '1997-11-30'),
+(27, 'Uma', 'Underwood', 29, 'Female', '1994-08-12'),
+(28, 'Oscar', 'Olsen', 50, 'Male', '1973-05-05'),
+(29, 'Emily', 'Elliott', 34, 'Female', '1989-10-20'),
+(30, 'Aaron', 'Aaronson', 39, 'Male', '1984-12-25');
 
 -- Insert data into employee_salary
 INSERT INTO employee_salary (employee_id, first_name, last_name, occupation, salary, dept_id)
@@ -69,7 +79,17 @@ VALUES
 (17, 'Shauna', 'Malwae-Tweep', 'Reporter', 52000, NULL),
 (18, 'Ethel', 'Beavers', 'Retired', 10000, NULL),
 (19, 'Dennis', 'Feinstein', 'Businessman', 120000, NULL),
-(20, 'Jennifer', 'Barkley', 'Political Consultant', 95000, NULL);
+(20, 'Jennifer', 'Barkley', 'Political Consultant', 95000, NULL),
+(21, 'Sam', 'Smith', 'Parks Director', 65000, 1),
+(22, 'Samantha', 'Sims', 'Office Manager', 60000, 1),
+(23, 'Eva', 'Evans', 'Nurse', 55000, 4),
+(24, 'Olivia', 'Ortiz', 'City Planner', 57000, 3),
+(25, 'Adam', 'Adams', 'State Auditor', 70000, 6),
+(26, 'Ivy', 'Ingram', 'Shoe Shiner and Musician', 20000, NULL),
+(27, 'Uma', 'Underwood', 'Reporter', 48000, NULL),
+(28, 'Oscar', 'Olsen', 'Businessman', 120000, NULL),
+(29, 'Emily', 'Elliott', 'Political Consultant', 95000, NULL),
+(30, 'Aaron', 'Aaronson', 'City Manager', 90000, 3);
 
 -- Create parks_departments table
 CREATE TABLE parks_departments (
