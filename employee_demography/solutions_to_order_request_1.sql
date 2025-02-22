@@ -54,15 +54,57 @@ SELECT AVG(age) AS avg_age
 FROM parks_and_recreation.employee_demographics;
 
 -- #12 A list of employees who have a birth date in the current month.
-SELECT * 
+SELECT *
 FROM parks_and_recreation.employee_demographics
-
-WHERE MONTH(birth_date) = MONTH(CURRENT_DATE()) AND YEAR(birth_date) <= (CURRENT_DATE());
+WHERE (DATE(birth_date)) = DATE(CURRENT_DATE());
 
 -- #13 A breakdown of the number of employees in each age group (e.g., 20-29, 30-39, etc.)
+SELECT 
+CONCAT(FLOOR(age / 10 ) * 10, '-', FLOOR(age / 10) * 10 + 9) AS age_group,
+COUNT(*) AS employee_count
+FROM parks_and_recreation.employee_demographics
+GROUP BY FLOOR(age / 10)
+ORDER BY FLOOR(age / 10);
 
+-- #14 A list of employees whose first name starts and ends with the same letter.
+SELECT *
+FROM parks_and_recreation.employee_demographics
+WHERE LOWER(SUBSTRING(first_name, 1,1)) = LOWER(SUBSTRING(first_name, -1,1));
 
+-- #15 The gender distribution percentage of all employees.
+SELECT gender,
+COUNT(*) AS fre_gender,
+ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) 
+FROM parks_and_recreation.employee_demographics), 2) AS gender_percentage
+FROM parks_and_recreation.employee_demographics
+GROUP BY gender;
 
+-- #16 The top 5 most common last names among employees.
+SELECT last_name, COUNT(*) AS freq_last_name
+FROM parks_and_recreation.employee_demographics
+GROUP BY last_name 
+ORDER BY freq_last_name DESC
+LIMIT 5;
 
+-- #16 A list of employees who are the only ones with their last name in the company.
+SELECT ed.*
+FROM parks_and_recreation.employee_demographics ed
+JOIN (
+	SELECT last_name
+    FROM parks_and_recreation.employee_demographics
+    GROUP BY last_name
+    HAVING COUNT(*) = 1
+) unique_last_names
+ON ed.last_name = unique_last_names.last_name; 
 
+-- #17 A list of employees who are the only ones with their last name in the company.
+SELECT ed. *
+FROM parks_and_recreation.employee_demographics ed
+join (
+	SELECT last_name
+    FROM parks_and_recreation.employee_demographics
+    GROUP BY last_name
+    HAVING COUNT(*) = 1
+) unique_last_names
+ON parks_and_recreation.employee_demographics.last_name = unique_last_names.last_name;
 
