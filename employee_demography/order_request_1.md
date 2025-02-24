@@ -1,6 +1,6 @@
 # Employee Demography Data Request
 
-## Requester: John Doe
+## Requester: James Nathan
 ## Data Analyst: Jeremiah Ochepo
 
 ### Request Details:
