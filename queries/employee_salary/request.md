@@ -55,10 +55,6 @@ I need some employee Salary data for analysis. Could you help me pull the follow
 
 ---
 
-Let me know if you need hints or further clarification!
-
-Please provide this data as soon as possible. Let me know if you need any clarifications. Thanks!
-
 Best,
 John Doe
 
