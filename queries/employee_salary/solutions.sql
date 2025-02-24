@@ -1,5 +1,5 @@
 -- Data Analist: Jeremiah
--- This solution is for "order_request_2" by "John Doe"
+-- This solution is for "request" by "John Doe"
 
 -- #1. Can you give me a list of all employees who earn more than $60,000?
 SELECT *
