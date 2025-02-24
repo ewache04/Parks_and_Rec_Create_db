@@ -30,8 +30,7 @@ I need some employee demographic data for analysis. Could you help me pull the f
 19. A list of employees whose names contain at least three vowels.
 20. The total number of employees hired in the last five years.
 
-Please provide this data as soon as possible. Let me know if you need any clarifications. Thanks!
-
+---
 Best,
 James Nathan
 
