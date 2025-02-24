@@ -1,5 +1,5 @@
 -- Data Analist: Jeremiah
--- This solution is for "order_request_1" by "James Nathan"
+-- This solution is for "request" by "James Nathan"
 
 -- #1. Complete list of all employee demographic data
 SELECT * 
