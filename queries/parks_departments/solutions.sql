@@ -6,6 +6,10 @@ SELECT *
 FROM parks_and_recreation.parks_departments;
 
 -- #2. The total number of employees in each department.
-SELECT department_name,  COUNT(parks_departments.department_id = employee_salary.dept_id)
-FROM parks_departments;
+SELECT 
+    d.department_name, 
+    COUNT(e.employee_id) AS employee_count
+FROM parks_departments d
+LEFT JOIN employee_salary e ON d.department_id = e.dept_id
+GROUP BY d.department_name;
 
