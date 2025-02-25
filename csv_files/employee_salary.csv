@@ -1,0 +1,13 @@
+employee_id,first_name,last_name,occupation,salary,dept_id
+1,Leslie,Knope,"Deputy Director of Parks and Recreation",75000,1
+2,Ron,Swanson,"Director of Parks and Recreation",70000,1
+8,Chris,Traeger,"City Manager",90000,3
+9,Ben,Wyatt,"State Auditor",70000,6
+12,Craig,Middlebrooks,"Parks Director",65000,1
+19,Dennis,Feinstein,Businessman,120000,NULL
+20,Jennifer,Barkley,"Political Consultant",95000,NULL
+21,Sam,Smith,"Parks Director",65000,1
+25,Adam,Adams,"State Auditor",70000,6
+28,Oscar,Olsen,Businessman,120000,NULL
+29,Emily,Elliott,"Political Consultant",95000,NULL
+30,Aaron,Aaronson,"City Manager",90000,3
