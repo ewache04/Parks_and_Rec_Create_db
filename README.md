@@ -1,4 +1,4 @@
-# Parks and Recreation Database Project
+# **Parks and Recreation Database Project**
 
 This project is designed to create and manage a database for a Parks and Recreation department. It includes SQL scripts for database creation, table creation, data insertion, and analytical reports.
 
@@ -48,7 +48,6 @@ C:.
 │
 ├───database
 │   │   create_database.sql
-│   │   parks_and_recreation_create_db.sql
 │   │   README.md
 │   │
 │   ├───create_tables
@@ -70,15 +69,15 @@ C:.
 └───sql_queries_and_analytical_insights
     ├───employee_demography
     │       analytical_insights.md
-    │       sql_queries.sql
+    │       demography_queries.sql
     │
     ├───employee_salary
     │       analytical_insights.md
-    │       sql_queries.sql
+    │       salary_queries.sql
     │
     └───parks_departments
             analytical_insights.md
-            sql_queries.sql
+            departments_queries.sql
 ```
 
 ---
