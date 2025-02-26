@@ -3,7 +3,7 @@
 ## **Overview**  
 This section contains SQL scripts for setting up the **Parks and Recreation** database, including creating tables and inserting data related to employee demographics, salaries, and departments.  
 
-## **Project Structure**  
+## **Database Structure**  
 
 ```
 database/
@@ -96,4 +96,4 @@ After creating the tables, populate them by running these scripts **in the corre
 ---
 
 ## **Next Steps**  
-Once the database is set up, you can explore the **analytical insights** and **SQL queries** located in the `sql_queries_and_analytical_insights` folder to analyze the data.
+Once the database is set up, you can explore the **analytical insights** and **SQL queries** located in the `sql_queries_and_analytical_insights` folder to analyze the data.  
