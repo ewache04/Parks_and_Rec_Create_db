@@ -1,7 +1,6 @@
-
 ## **Employee Demography Data Analysis Report**
 
-### **Prepared by: Jeremiah Ochepo**
+### **Prepared by: Jeremiah (Data Analyst)**
 ### **Date: 2/24/2025**
 ### **Requested by: James Nathan**
 
