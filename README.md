@@ -6,7 +6,7 @@ This project is designed to create and manage a database for a Parks and Recreat
 
 ## Visual Representation of Database Tables
 
-Below are the embedded images from the `media` folder that demostrate a visual representation of the database tables:
+Below are the embedded images from the `media` folder that demonstrate a visual representation of the database tables:
 
 ### Employee Demographics Table
 ![Employee Demographics Table](media/table_view/employee_demographics.gif)
@@ -52,14 +52,14 @@ C:.
 │   │   README.md
 │   │
 │   ├───create_tables
+│   │       create_parks_departments.sql
 │   │       create_employee_demographics.sql
 │   │       create_employee_salary.sql
-│   │       create_parks_departments.sql
 │   │
 │   └───insert_data
+│           insert_parks_departments.sql
 │           insert_employee_demographics.sql
 │           insert_employee_salary.sql
-│           insert_parks_departments.sql
 │
 ├───media
 │   └───table_view
@@ -95,31 +95,54 @@ git clone <repository-url>
 
 ## Database Setup
 
-1. **Create the Database**: Run the `create_database.sql` script located in the `database` folder to create the initial database.
+The database must be created, tables created, and data inserted in the **correct order** to ensure proper functionality. Follow these steps:
 
-    ```sql
-    source database/create_database.sql
-    ```
+### **1️⃣ Create the Database**
+Run the following command to create the **Parks and Recreation** database:
 
-2. **Create Tables**: Navigate to the `create_tables` folder and run the SQL scripts to create the necessary tables.
-
-    ```sql
-    source database/create_tables/create_employee_demographics.sql
-    source database/create_tables/create_employee_salary.sql
-    source database/create_tables/create_parks_departments.sql
-    ```
+```sql
+source database/create_database.sql;
+```
 
 ---
 
-## Data Insertion
+### **2️⃣ Create Tables**
+Execute the scripts below to create the required tables **in the following order**:
 
-1. **Insert Data**: Navigate to the `insert_data` folder and run the SQL scripts to insert data into the tables.
+1. **Create `parks_departments` Table**:
+   ```sql
+   source database/create_tables/create_parks_departments.sql;
+   ```
 
-    ```sql
-    source database/insert_data/insert_employee_demographics.sql
-    source database/insert_data/insert_employee_salary.sql
-    source database/insert_data/insert_parks_departments.sql
-    ```
+2. **Create `employee_demographics` Table**:
+   ```sql
+   source database/create_tables/create_employee_demographics.sql;
+   ```
+
+3. **Create `employee_salary` Table**:
+   ```sql
+   source database/create_tables/create_employee_salary.sql;
+   ```
+
+---
+
+### **3️⃣ Insert Data**
+After creating the tables, populate them by running the following scripts **in the correct order**:
+
+1. **Insert Data into `parks_departments` Table**:
+   ```sql
+   source database/insert_data/insert_parks_departments.sql;
+   ```
+
+2. **Insert Data into `employee_demographics` Table**:
+   ```sql
+   source database/insert_data/insert_employee_demographics.sql;
+   ```
+
+3. **Insert Data into `employee_salary` Table**:
+   ```sql
+   source database/insert_data/insert_employee_salary.sql;
+   ```
 
 ---
 
