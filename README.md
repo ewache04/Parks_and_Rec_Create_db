@@ -87,7 +87,7 @@ C:.
 To get started with this project, clone the repository to your local machine:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/ewache04/Parks_and_Rec_Create_db>
 ```
 
 ---
