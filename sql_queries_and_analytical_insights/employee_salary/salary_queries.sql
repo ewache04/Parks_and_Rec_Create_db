@@ -159,5 +159,15 @@ SELECT COUNT(*) AS total_employees
 FROM parks_and_recreation.employee_salary;
 
 -- ==============================
+-- 21. Employees who got a salary raise (5% if < $50k, else 3%)
+-- ==============================
+SELECT first_name, last_name, salary,
+       CASE 
+           WHEN salary < 50000 THEN CONCAT('$', FORMAT(salary + (salary * 0.05), 2))
+           ELSE CONCAT('$', FORMAT(salary + (salary * 0.03), 2))
+       END AS new_salary
+FROM parks_and_recreation.employee_salary;
+
+-- ==============================
 -- END OF SCRIPT
 -- ==============================
