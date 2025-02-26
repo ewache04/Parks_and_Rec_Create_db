@@ -1,36 +1,43 @@
+-- ======================================================
 -- Author: Jeremiah (Data Analyst)
--- Last Updated: 2/25/2025
--- Description: This script inserts sample data into the `parks_departments` table.
---              The table stores department-related information, including department name.
---              This script is part of a larger database setup for the Parks and Recreation department.
---              Advanced features include error handling, transaction management, and future-proofing for scalability.
+-- Last Updated: 02/25/2025
+-- Description:
+--   This script inserts sample data into the `parks_departments` table.
+--   Includes:
+--     - Transaction management for data integrity.
+--     - Duplicate handling to prevent errors.
+--     - Logging for better debugging and maintainability.
+-- ======================================================
 
--- Start a transaction to ensure data integrity.
--- If any error occurs during insertion, the entire transaction will be rolled back.
+-- Start a transaction to ensure atomicity.
 START TRANSACTION;
 
--- Insert data into the `parks_departments` table.
--- Each record includes department name.
--- Note: The `department_id` field is auto-incremented, so it does not need to be specified.
+-- Insert data only if department_name does not already exist to prevent duplicates.
 INSERT INTO parks_departments (department_name)
-VALUES
-  ('Parks and Recreation'),
-  ('Animal Control'),
-  ('Public Works'),
-  ('Healthcare'),
-  ('Library'),
-  ('Finance');
+SELECT 'Parks and Recreation' 
+WHERE NOT EXISTS (SELECT 1 FROM parks_departments WHERE department_name = 'Parks and Recreation')
+UNION ALL
+SELECT 'Animal Control' 
+WHERE NOT EXISTS (SELECT 1 FROM parks_departments WHERE department_name = 'Animal Control')
+UNION ALL
+SELECT 'Public Works' 
+WHERE NOT EXISTS (SELECT 1 FROM parks_departments WHERE department_name = 'Public Works')
+UNION ALL
+SELECT 'Healthcare' 
+WHERE NOT EXISTS (SELECT 1 FROM parks_departments WHERE department_name = 'Healthcare')
+UNION ALL
+SELECT 'Library' 
+WHERE NOT EXISTS (SELECT 1 FROM parks_departments WHERE department_name = 'Library')
+UNION ALL
+SELECT 'Finance' 
+WHERE NOT EXISTS (SELECT 1 FROM parks_departments WHERE department_name = 'Finance');
 
 -- Commit the transaction if all inserts are successful.
--- This ensures that the data is permanently saved to the database.
 COMMIT;
 
--- If any errors occur, roll back the transaction to maintain data integrity.
--- This prevents partial or corrupted data from being inserted.
--- Note: Replace this section with proper error handling in your application or script.
--- ROLLBACK;
+-- Log success message (optional, for debugging).
+SELECT 'Data successfully inserted into parks_departments.' AS status_message;
 
--- Data inserted successfully.
--- You can now query the `parks_departments` table to verify the inserted data.
-
--- End of Script.
+-- ======================================================
+-- End of Script
+-- ======================================================
