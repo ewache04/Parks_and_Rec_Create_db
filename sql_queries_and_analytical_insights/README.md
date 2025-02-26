@@ -1,9 +1,9 @@
-# **SQL Queries and Analytical Insights Guide**  
+# **SQL Queries and Analytical Insights Guide**
 
 ## **Overview**  
 The `sql_queries_and_analytical_insights` folder contains SQL queries and analytical insights for the **Parks and Recreation** database. These queries and insights are organized by topic, focusing on **employee demographics**, **employee salaries**, and **parks departments**.  
 
-This guide will help you navigate the folder, understand the structure, and use the provided SQL queries and insights effectively.  
+This guide will help you navigate the folder, understand the structure, and use the provided SQL queries and insights effectively.
 
 ---
 
@@ -12,14 +12,15 @@ This guide will help you navigate the folder, understand the structure, and use 
 ```
 sql_queries_and_analytical_insights/
 ├── employee_demography/
-│   ├── sql_queries.sql
+│   ├── demography_queries.sql
 │   ├── analytical_insights.md
 ├── employee_salary/
-│   ├── sql_queries.sql
+│   ├── salary_queries.sql
 │   ├── analytical_insights.md
 └── parks_departments/
-    ├── sql_queries.sql
+    ├── departments_queries.sql
     ├── analytical_insights.md
+└── README.md
 ```
 
 ---
@@ -27,15 +28,15 @@ sql_queries_and_analytical_insights/
 ## **Folder Breakdown**  
 
 ### **1️⃣ Employee Demography**  
-- **`sql_queries.sql`**: Contains SQL queries related to employee demographics, such as filtering, grouping, and analyzing employee data.  
+- **`demography_queries.sql`**: Contains SQL queries related to employee demographics, such as filtering, grouping, and analyzing employee data.  
 - **`analytical_insights.md`**: Provides insights and explanations derived from the queries, such as trends in employee demographics or key statistics.  
 
 ### **2️⃣ Employee Salary**  
-- **`sql_queries.sql`**: Contains SQL queries related to employee salaries, such as calculating averages, identifying outliers, or comparing salary ranges.  
+- **`salary_queries.sql`**: Contains SQL queries related to employee salaries, such as calculating averages, identifying outliers, or comparing salary ranges.  
 - **`analytical_insights.md`**: Provides insights and explanations derived from the queries, such as salary distribution or department-wise salary trends.  
 
 ### **3️⃣ Parks Departments**  
-- **`sql_queries.sql`**: Contains SQL queries related to parks departments, such as department performance, resource allocation, or employee distribution.  
+- **`departments_queries.sql`**: Contains SQL queries related to parks departments, such as department performance, resource allocation, or employee distribution.  
 - **`analytical_insights.md`**: Provides insights and explanations derived from the queries, such as department efficiency or key metrics.  
 
 ---
@@ -43,12 +44,12 @@ sql_queries_and_analytical_insights/
 ## **How to Use**  
 
 ### **1️⃣ Running SQL Queries**  
-1. Open the `sql_queries.sql` file for the topic you're interested in (e.g., `employee_demography/sql_queries.sql`).  
+1. Open the `demography_queries.sql`, `salary_queries.sql`, or `departments_queries.sql` file for the topic you're interested in.  
 2. Copy the queries and execute them in your MySQL environment (e.g., MySQL Workbench or command line).  
 3. Review the results to analyze the data.  
 
 ### **2️⃣ Reading Analytical Insights**  
-1. Open the `analytical_insights.md` file for the topic you're interested in (e.g., `employee_demography/analytical_insights.md`).  
+1. Open the `analytical_insights.md` file for the topic you're interested in.  
 2. Read the insights to understand the key findings and trends derived from the SQL queries.  
 3. Use these insights to inform decision-making or further analysis.  
 
@@ -94,6 +95,6 @@ sql_queries_and_analytical_insights/
 ---
 
 ## **Next Steps**  
-- Explore the `csv_files` folder for exported  raw data used in the database.  
+- Explore the `csv_files` folder for exported raw data used in the database.  
 - Refer to the `database` folder for scripts to set up and populate the database.  
 - Use the `media` folder for visual representations of the database tables.  
