@@ -94,6 +94,6 @@ sql_queries_and_analytical_insights/
 ---
 
 ## **Next Steps**  
-- Explore the `csv_files` folder for raw data used in the database.  
+- Explore the `csv_files` folder for exported  raw data used in the database.  
 - Refer to the `database` folder for scripts to set up and populate the database.  
 - Use the `media` folder for visual representations of the database tables.  
