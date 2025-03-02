@@ -159,10 +159,10 @@ To view the analytical insights, navigate to the respective folders and open the
 
 ## Media
 
-The `media` folder contains GIFs that provide a visual representation of the database tables. These images are displayed at the top of this README for quick reference.
+The `media` folder contains GIFs that provide a visual representation of the database tables. These images are displayed at the top of this README for quick reference. 
 
 ---
 
 ## License
 
-This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file for more details. Thanks!
